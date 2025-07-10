@@ -1,0 +1,528 @@
+* {
+  font-family: "Segoe UI", Arial, sans-serif;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  background-color: #e7eaf3;
+}
+.navbar {
+  width: 80%;
+  height: 40% !important;
+  margin: 0 auto;
+}
+.nav-link
+{
+  font-weight: 500;
+  margin: 5px;
+}
+/* Main Dropdown */
+.nav-item.dropdown:hover .custom-dropdown {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* All Nested Submenus */
+.dropdown-submenu:hover > .custom-submenu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Base Dropdown Menu */
+.custom-dropdown,
+.custom-submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background-color: white;
+  border: 3px solid #e7eaf3;
+  border-radius: 4px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Position submenus on right */
+.dropdown-submenu .custom-submenu {
+  top: 0;
+  left: 95%;
+}
+
+/* Dropdown item styling */
+.dropdown-item {
+  padding: 10px 20px;
+  font-weight: 400;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+/* Hover effect with underline */
+.dropdown-item:hover {
+  background-color: white;
+  color: black;
+}
+
+.dropdown-item::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  bottom: 6px;
+  width: 0;
+  height: 2px;
+  background-color: #676768;
+  transition: width 0.3s ease;
+}
+
+.dropdown-item:hover::after {
+  width: calc(60% - 40px);
+}
+/* Hide by default */
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 800px;
+  background-color: white;
+  border: 5px solid #e7eaf3;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+/* Show on hover */
+.mega-menu-parent:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mega column heading */
+.mega-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #e5e5e5;
+  padding-bottom: 5px;
+  width: 60%;
+}
+
+.hero-section h1 {
+  line-height: 1.2;
+}
+
+.hero-section .btn-primary {
+  padding: 0.7em 2em;
+  font-size: 1.1rem;
+  border-radius: 2em;
+}
+
+.stats {
+  background-color: #fff;
+  border-radius: 1rem;
+  margin-top: -50px; /* overlap hero section */
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 80%;
+  position: relative;
+  z-index: 5;
+  margin-left: auto;
+  margin-right: auto;
+}
+.stat-icon {
+  background-color: #eef1f6;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 991.98px) {
+  .hero-section .hero-img {
+    width: 220px !important;
+    height: 220px !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .stat-box {
+    margin-bottom: 1.5em;
+  }
+}
+.txt1 {
+  color: #0b5ed7 !important;
+}
+.about-section {
+  padding: 60px 0;
+}
+
+.support-box {
+  position: absolute;
+  left: -30px;
+  bottom: 0;
+  background: #1a4de2;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 170px;
+  text-align: center;
+}
+.support-box i {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.check-list i {
+  color: #1a4de2;
+  margin-right: 10px;
+}
+@media (max-width: 768px) {
+  .side-img,
+  .support-box {
+    position: static;
+    margin-top: 20px;
+  }
+}
+
+.services-section {
+  background-color: #f8f9fa;
+}
+.service-card i {
+  background-color: #e8f0fe;
+  padding: 15px;
+  border-radius: 50%;
+}
+a.text-primary:hover {
+  text-decoration: underline;
+}
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #eef1f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.3;
+}
+
+.project-section {
+  background-color: #f5f5f8;
+}
+
+.project-section h2 {
+  line-height: 1.4;
+}
+
+.custom-arrow {
+  width: 40px;
+  height: 40px;
+  background-color: #f0f0f0; /* light gray */
+  color: #000; /* black */
+  border-radius: 50%;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.custom-arrow:hover {
+  background-color: #0e38b1;
+  color: white;
+  transform: scale(1.1);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-item img {
+  transition: transform 0.5s ease;
+}
+
+.carousel-item img:hover {
+  transform: scale(1.03);
+}
+.pricing-section {
+  padding: 50px 0;
+  text-align: center;
+  background-color: white;
+}
+
+.pricing-card {
+  background-color: #f5f5f8;
+  border-radius: 12px;
+  padding: 30px 20px;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+.pricing-card i {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #0031b8;
+  color: white !important;
+  font-size: 15px;
+}
+/* Common hover effect for side cards (excluding center one) */
+.pricing-card:hover {
+  background-color: #0031b8 !important;
+  color: white !important;
+}
+
+.pricing-card:hover h4,
+.pricing-card:hover .price,
+.pricing-card:hover p,
+.pricing-card:hover li,
+.pricing-card:hover small {
+  color: white !important;
+}
+
+/* Icon color white on hover */
+.pricing-card:hover i {
+  color: #0031b8 !important;
+  background-color: white !important;
+  width: 1.5rem;
+  height: 1.5rem;
+  font: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button on hover: white bg + blue text */
+.pricing-card:hover .btn {
+  background-color: white !important;
+  color: #0031b8 !important;
+}
+
+.most-popular {
+  background-color: #0031b8;
+  color: white !important;
+}
+
+.most-popular .feature-list li,
+.most-popular .price,
+.most-popular p,
+.most-popular h4,
+.most-popular hr,
+.most-popular small {
+  color: white !important;
+}
+
+.most-popular i {
+  color: #0031b8 !important;
+  background-color: white !important;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.most-popular .white {
+  padding: 10px;
+  color: #0031b8;
+  background-color: white;
+  font-weight: bold;
+}
+
+.feature-list li {
+  list-style: none;
+  line-height: 30px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.feature-list i {
+  margin-right: 10px;
+}
+.darkblue {
+  background-color: #0031b8;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
+.tag {
+  background-color: white;
+  color: #0031b8;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  border-radius: 10px;
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #0031b8;
+}
+
+@media (max-width: 767px) {
+  .tag {
+    top: -10px;
+  }
+}
+hr {
+  border: none;
+  height: 3px;
+  background-color: #333;
+  width: 100%;
+}
+.price {
+  font-size: 3rem !important;
+  font-weight: 600 !important;
+}
+.mute {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: gray;
+}
+.testimonial-section {
+  padding: 60px 0;
+  text-align: center;
+  background-color: #f5f5f8;
+}
+
+.arrow-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background-color: #eaeefb;
+  color: #333;
+  margin: 0 5px;
+  transition: 0.3s;
+}
+.arrow-btn:hover {
+  background-color: #0031b8;
+  color: white;
+}
+.blog-card {
+  transition: box-shadow 0.3s ease;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  width: 90%;
+}
+
+/* Image zoom + rotate */
+.blog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.blog-card:hover img {
+  transform: scale(1.15) rotate(-10deg);
+}
+
+/* Title, Meta */
+.blog-meta {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.blog-title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #000;
+}
+
+/* Button base */
+.blog-btn {
+  color: #0031b8;
+  border: 1px solid #0031b8;
+  font-weight: 500;
+  transition: all 0.4s ease;
+}
+
+/* Button icon */
+.blog-btn i {
+  transition: transform 0.4s ease;
+}
+
+/* Button hover (inside card hover) */
+.blog-card:hover .blog-btn {
+  background-color: #0031b8 !important;
+  color: white !important;
+}
+
+/* Rotate icon */
+.blog-card:hover .blog-btn i {
+  transform: scale(-15deg);
+}
+.innovation
+{
+  background-color: #0031b8;
+}
+.btn-sol
+{
+  border-radius: 10px;
+  border: 2px solid white;
+  padding: 1rem;
+  width: 50%;
+  font-weight: 500;
+  font-size: small;
+}
+
+.btn-primary
+{
+  background-color: #0031b8 !important;
+}
+.btn-light:hover
+{
+  background-color: #0031b8 !important;
+  color: white !important;
+}
+
+.socials 
+{
+  background-color: #d0d0d2;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+.socials:hover
+{
+  background-color: #0031b8;
+  color: white !important;
+}
+.f-li:hover
+{
+  color: #0031b8;
+  transform: translateX(5px);
+  cursor: pointer;
+}
